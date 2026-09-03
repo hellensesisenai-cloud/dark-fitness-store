@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Fitness - Suplementos e Roupas Premium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🔥 DARK FITNESS</h1>
+            </div>
+            
+            <div class="nav-center">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#produtos" class="nav-link">Produtos</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <button id="theme-toggle" class="theme-toggle" title="Alternar tema">🌙</button>
+                <div class="cart-icon">
+                    <span>🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+                <a href="admin.html" class="admin-btn">Admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>TRANSFORME SEU CORPO</h2>
+            <p>Suplementos e roupas premium para atletas</p>
+            <button class="btn-primary" onclick="document.getElementById('produtos').scrollIntoView({behavior: 'smooth'})">Ver Produtos</button>
+        </div>
+        <div class="hero-image">
+            <div class="hero-placeholder">💪 DARK FITNESS 💪</div>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filtros">
+        <div class="container">
+            <h3>Filtrar por Categoria</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="suplementos">Suplementos</button>
+                <button class="filter-btn" data-filter="roupas">Roupas</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="products-grid" id="products-grid">
+                <!-- Produtos serão carregados aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre Dark Fitness</h2>
+            <p>Somos uma marca premium de suplementos e roupas fitness, parceira oficial da DARK LAB. Nosso objetivo é fornecer os melhores produtos para quem leva o treino a sério.</p>
+            <div class="features">
+                <div class="feature">
+                    <h3>🏆 Qualidade</h3>
+                    <p>Produtos de primeira qualidade</p>
+                </div>
+                <div class="feature">
+                    <h3>🚚 Entrega Rápida</h3>
+                    <p>Entregamos em até 5 dias úteis</p>
+                </div>
+                <div class="feature">
+                    <h3>💯 Garantia</h3>
+                    <p>100% de satisfação garantida</p>
+                </div>
+                <div class="feature">
+                    <h3>🤝 Suporte 24/7</h3>
+                    <p>Sempre pronto para ajudar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-info">
+                <p>📧 Email: contato@darkfitness.com</p>
+                <p>📱 WhatsApp: (11) 9999-9999</p>
+                <p>📍 São Paulo - SP</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal do Carrinho -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Itens do carrinho aparecem aqui -->
+            </div>
+            <div class="cart-total">
+                <h3>Total: R$ <span id="total-price">0.00</span></h3>
+            </div>
+            <button class="btn-primary" style="width: 100%; margin-top: 20px;">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Modal do Produto -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content product-modal">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Detalhes do produto aparecem aqui -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Dark Fitness. Todos os direitos reservados. Parceira oficial DARK LAB 🤝</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
